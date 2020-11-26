@@ -1,4 +1,8 @@
+/* Copyright © 2020 你哭时梨花带雨。 and/or its affiliates. All rights reserved. */
 package com.numb.rd.controller;
 
-public class RedController {
-}
+/**
+ * @author thenumb
+ * @date 2020-11-27 12:30 上午
+ */
+public class RedController {}
