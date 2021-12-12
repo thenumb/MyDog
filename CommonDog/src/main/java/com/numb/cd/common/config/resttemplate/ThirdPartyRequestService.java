@@ -1,4 +1,4 @@
-package com.numb.bd.service;
+package com.numb.cd.common.config.resttemplate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;

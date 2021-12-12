@@ -5,15 +5,15 @@
     <parent>
         <artifactId>MyDog</artifactId>
         <groupId>org.numb</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${Dog.version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>BlueDog</artifactId>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.numb.cd.common</groupId>
+            <artifactId>CommonDog</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -26,7 +26,6 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
-            <version>4.5.7</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -41,4 +40,68 @@
             <artifactId>fastjson</artifactId>
         </dependency>
     </dependencies>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-jar-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <classesDirectory>target/classes/</classesDirectory>-->
+<!--                    <archive>-->
+<!--                        &lt;!&ndash;生成的jar中，不要包含pom.xml和pom.properties这两个文件&ndash;&gt;-->
+<!--                        <addMavenDescriptor>false</addMavenDescriptor>-->
+<!--                        <manifest>-->
+<!--                            <mainClass>com.numb.bd.BlueDogApplication</mainClass>-->
+<!--                            &lt;!&ndash; 打包时 MANIFEST.MF文件不记录的时间戳版本 &ndash;&gt;-->
+<!--                            <useUniqueVersions>false</useUniqueVersions>-->
+<!--                            <addClasspath>true</addClasspath>-->
+<!--                            <classpathPrefix>lib/</classpathPrefix>-->
+<!--                        </manifest>-->
+<!--                        <manifestEntries>-->
+<!--                            &lt;!&ndash;jar中的MANIFEST.MF文件ClassPath需要添加config目录才能读取到配置文件&ndash;&gt;-->
+<!--                            <Class-Path>config/.</Class-Path>-->
+<!--                        </manifestEntries>-->
+<!--                    </archive>-->
+<!--                    <excludes>-->
+<!--                        <exclude>**/*.yml</exclude>-->
+<!--                        <exclude>**/*.properties</exclude>-->
+<!--                        <exclude>**/*.sh</exclude>-->
+<!--                        <exclude>**/*.bat</exclude>-->
+<!--                    </excludes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-assembly-plugin</artifactId>-->
+<!--                <version>2.4</version>-->
+<!--                <configuration>-->
+<!--                    <descriptors>-->
+<!--                        <descriptor>./../PackageaAssembly/src/main/assembly.xml</descriptor>-->
+<!--                    </descriptors>-->
+<!--                    <archive>-->
+<!--                        <manifest>-->
+<!--                            <mainClass>com.cyy.MvnPackageApplication</mainClass>-->
+<!--                        </manifest>-->
+<!--                    </archive>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>make-assembly</id>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>single</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <finalName>${project.artifactId}</finalName>-->
+<!--                            <descriptors>-->
+<!--                                <descriptor>./../PackageaAssembly/src/main/assembly.xml</descriptor>-->
+<!--                            </descriptors>-->
+<!--                            <outputDirectory>./dist/</outputDirectory>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
+
 </project>

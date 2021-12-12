@@ -1,4 +1,4 @@
-package com.numb.bd.config;
+package com.numb.cd.common.config.resttemplate;
 
 import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.http.client.HttpClient;
@@ -18,7 +18,7 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
 @Configuration
-public class RestTemplateConfig {
+public class RestTemplateConfiguration {
     @Autowired
     private RestTemplateProperties restTemplateProperties;
 
