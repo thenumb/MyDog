@@ -49,6 +49,10 @@
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka_2.13</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse.paho</groupId>
+            <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
+        </dependency>
     </dependencies>
     <!-- 对应开发、测试、生产三种环境 -->
     <profiles>
